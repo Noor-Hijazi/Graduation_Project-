@@ -17,8 +17,9 @@ body {
 .img-slider {
     position: relative;
     width: 90%; 
-    margin: 20px;
+    margin-top: 30px;
     overflow: hidden;
+    margin-left: 50px;
 }
 
 .slider {
@@ -36,7 +37,7 @@ body {
     max-width: 800px; 
     height: 500px;
     border-radius: 10px;
-    margin-left: 80px;
+    margin-left: 60px;
     
 }
 
@@ -48,12 +49,26 @@ body {
     background-color: #F0EBE3;
     border-radius: 10px;
     position: relative;
-    left: 140px;
+    left: 120px;
     font-weight: 400;
 }
 
-.prev-btn,
 .next-btn {
+    border-radius: 10px;
+    margin: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev-btn{
+    border-radius: 10px;
+    margin: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
