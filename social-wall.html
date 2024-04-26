@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social-wall</title>
+</head>
+<style>
+ section{
+   
+    background-color: #F2F1F0;
+     padding: 10px 0px 0px; 
+     margin: 0;
+     position: relative;
+    }
+   .container{
+    margin: 70px;
+    text-align: center;
+   
+   }
+   .body{
+   font-family: 'DraftBMedium';
+    font-size: 20px;
+    color: #000000;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+
+  margin: 4px;
+}
+
+.image-container img {
+
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+button {
+  display: block;
+  margin-top:10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f3e3b6;
+  color: rgb(5, 5, 5);
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+</style>
+</head>
+<body>
+
+    <section >
+        <div class="container">
+<h1>Social Wall </h1>
+<p>See what other travelers are doing in Jordan right now and if you use #WenderWise <br>on your social media posts you might see yourself up here too</p>
+        <div  class="image-gallery">
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/1631665/pexels-photo-1631665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="250px" height="250px" alt="Image 1">
+          <div class="overlay">
+            <div class="text">petra</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/3258226/pexels-photo-3258226.jpeg?auto=compress&cs=tinysrgb&w=600" width="250px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">  Jerash</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/19731874/pexels-photo-19731874/free-photo-of-close-up-of-souvenirs-from-jordan-on-a-market.jpeg?auto=compress&cs=tinysrgb&w=600" width="250px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text"> petra </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/13458329/pexels-photo-13458329.jpeg" width="250px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">  Wadi Rum</div>
+          </div>
+        </div>
+      
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/3293854/pexels-photo-3293854.jpeg?auto=compress&cs=tinysrgb&w=600" width="150px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text"> Jerash</div>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/11932400/pexels-photo-11932400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">  Amman</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/14226699/pexels-photo-14226699.jpeg?auto=compress&cs=tinysrgb&w=600" width="200px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">  Amman</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/5749562/pexels-photo-5749562.jpeg?auto=compress&cs=tinysrgb&w=600" width="200px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text"> Jerash</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/16386936/pexels-photo-16386936/free-photo-of-men-sitting-by-the-fire-on-a-desert.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="200px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text"> Wadi Rum</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/6992160/pexels-photo-6992160.jpeg?auto=compress&cs=tinysrgb&w=600" width="150px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">Amman </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/5104085/pexels-photo-5104085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">Jerash </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/3370311/pexels-photo-3370311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text"> Dead Sea</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/11932395/pexels-photo-11932395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="200px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">ِِAmman</div>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="https://images.pexels.com/photos/14045739/pexels-photo-14045739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="160px" height="250px" alt="Image 2">
+          <div class="overlay">
+            <div class="text">Amman</div>
+          </div>
+        </div></div></div>
+     <a href="form.html"> <button>Share your experience</button></a>
+      
+    </section>
+</body>
+</html>
