@@ -12,4 +12,4 @@ function loadContent(url, selector) {
 loadContent('nav.php', 'header');
 
 // // Load the footer
-// loadContent('footer.html', 'footer');
+loadContent('footer.html', 'footer');

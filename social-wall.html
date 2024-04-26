@@ -3,89 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="social-wall.css" rel="stylesheet">
     <title>social-wall</title>
 </head>
-<style>
- section{
-   
-    background-color: #F2F1F0;
-     padding: 10px 0px 0px; 
-     margin: 0;
-     position: relative;
-    }
-   .container{
-    margin: 70px;
-    text-align: center;
-   
-   }
-   .body{
-   font-family: 'DraftBMedium';
-    font-size: 20px;
-    color: #000000;
-}
-
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.image-container {
-  position: relative;
-
-  margin: 4px;
-}
-
-.image-container img {
-
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.overlay .text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
-}
-
-button {
-  display: block;
-  margin-top:10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f3e3b6;
-  color: rgb(5, 5, 5);
-  border: none;
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-</style>
 </head>
 <body>
 
     <section >
-        <div class="container">
-<h1>Social Wall </h1>
-<p>See what other travelers are doing in Jordan right now and if you use #WenderWise <br>on your social media posts you might see yourself up here too</p>
+    <div class="container">
+      <div class="text">
+        <h1>Social Wall </h1>
+        <p>See what other travelers are doing in Jordan right now and if you use #WenderWise <br>on your social media posts you might see yourself up here too</p>
+      </div>
+    
         <div  class="image-gallery">
         <div class="image-container">
           <img src="https://images.pexels.com/photos/1631665/pexels-photo-1631665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="250px" height="250px" alt="Image 1">
