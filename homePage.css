@@ -17,8 +17,9 @@ body {
 .img-slider {
     position: relative;
     width: 90%; 
-    margin: 20px;
+    margin-top: 30px;
     overflow: hidden;
+    margin-left: 50px;
 }
 
 .slider {
@@ -36,9 +37,8 @@ body {
     max-width: 800px; 
     height: 500px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-left: 60px;
     
-
 }
 
 .title {
@@ -49,12 +49,13 @@ body {
     background-color: #F0EBE3;
     border-radius: 10px;
     position: relative;
-    left: 60px;
+    left: 120px;
     font-weight: 400;
 }
 
-.prev-btn,
 .next-btn {
+    border-radius: 10px;
+    margin: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -63,7 +64,19 @@ body {
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1;
+}
+
+.prev-btn{
+    border-radius: 10px;
+    margin: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .prev-btn {
