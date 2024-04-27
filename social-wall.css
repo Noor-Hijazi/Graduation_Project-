@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text{
+    margin: 20px;
+}
+.text p{
+    font-size: 23px;
+}
+
+.text h1{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FAF9F6;
+}
+
+section{
+     padding: 10px 0px 0px; 
+     margin: 0;
+     position: relative;
+    }
+   .container{
+    margin: 30px 150px;
+    text-align: center;
+   
+   }
+   .body{
+   font-family: 'DraftBMedium';
+    font-size: 20px;
+    color: #000000;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+
+  margin: 4px;
+}
+
+.image-container img {
+    border-radius: 5px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+button {
+  display: block;
+  margin-bottom:10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #0039a6;
+  color: white;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  position: relative;
+  left: 10%;  
+}
+a{
+    text-decoration: none;
+}
