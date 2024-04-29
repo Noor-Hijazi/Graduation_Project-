@@ -17,9 +17,8 @@ body {
 .img-slider {
     position: relative;
     width: 90%; 
-    margin-top: 30px;
+    margin: 30px auto; 
     overflow: hidden;
-    margin-left: 50px;
 }
 
 .slider {
@@ -34,60 +33,74 @@ body {
 }
 
 .img {
-    max-width: 800px; 
-    height: 500px;
+    width: 700px; 
+    height: 500px; 
     border-radius: 10px;
-    margin-left: 60px;
-    
+    margin: 20px;
+
 }
 
 .title {
-    height: 250px;
     text-align: center;
-    width: 400px;
     padding: 20px;
     background-color: #F0EBE3;
     border-radius: 10px;
-    position: relative;
-    left: 120px;
     font-weight: 400;
+    width: 500px;
+    height: fit-content;
+    position: relative;
+    left: 7%;
 }
 
-.next-btn {
+.next-btn{
+    width: 30px;
     border-radius: 10px;
-    margin: 20px;
+    margin-top: -50px; 
     position: absolute;
     top: 50%;
+    left: 92%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     cursor: pointer;
     padding: 10px;
+    z-index: 1;
 }
-
-.prev-btn{
-    border-radius: 10px;
-    margin: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
 .prev-btn {
-    left: 0;
+    border-radius: 10px;
+    margin-top: -50px; 
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
 }
 
-.next-btn {
-    right: 0;
-}
-span{
+
+span {
     color: #416D19;
     font-weight: 800;
     font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-slider {
+        width: 100%; 
+        margin: 15px auto; 
+    }
+
+    .title {
+        padding: 10px;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
 }

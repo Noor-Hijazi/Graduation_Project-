@@ -45,7 +45,7 @@ body {
     display: grid; 
     margin: 20px;
     padding: 20px;
-    grid-template-columns:repeat(3,300px) ;
+    grid-template-columns: repeat(3,310px); 
     gap: 20px;
     justify-content: center;
     margin-top: 100px;
@@ -58,7 +58,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     justify-content: center;
-   
 }
 
 .hotel-card img {
@@ -84,7 +83,7 @@ body {
     font-weight: bold;
 }
 
-.hotel-card button{
+.hotel-card button {
     margin-top: 10px;
     width: 90px;
     padding: 10px;
@@ -96,14 +95,13 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-
 }
 
-.hotel-card button:hover{
+.hotel-card button:hover {
     background-color: #BFEA7C;
-   }
+}
 
-   #cityFilter{
+#cityFilter {
     width: 200px;
     height: 30px;
     border-radius: 10px;
@@ -113,18 +111,26 @@ body {
     border: none;
     align-self: center;
     position: absolute;
-    top: 93%;
-    left: 42%;
+    top: 98%;
+    left: 50%; 
+    transform: translateX(-50%); 
 }
+
 #cityFilter option {
-padding: 5px;    
+    padding: 5px;    
 }
+
 #cityFilter option:checked {
     background-color: #416D19; 
     color: #fff; 
-
 }
+
 #cityFilter option:hover {
     background-color: #BFEA7C; 
-    
+}
+
+@media screen and (max-width: 768px) {
+    .hotel-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
 }

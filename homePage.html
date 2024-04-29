@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homePage.css">
     <script src="homePage.js" defer></script>
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('#nav').load('nav.html'); 
+        $('#footer').load('footer.html');
+        $('#social-wall').load('social-wall.html');
+        $('#statistics').load('statistics.html');
+        $('#form').load('form.html');
+        $('#FAQ').load('FAQ.html');
+
+    })
+         
+</script>
+    <title>WanderWise</title>
 </head>
 <body>
+    <nav id="nav"></nav>
     <div class="img-slider">
         <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
         <div class="slider">
@@ -121,6 +135,13 @@
         <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
 
     </div>
-    
+
+    <div id="social-wall"></div>
+    <div id="form"></div>
+    <div id="statistics"></div>
+    <div id="FAQ"></div>
+
+    <footer id="footer"></footer>
+
 </body>
 </html>

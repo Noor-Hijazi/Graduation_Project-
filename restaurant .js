@@ -31,7 +31,7 @@ const restaurants = [
 
     },
     { 
-        img:'https://scontent.famm5-1.fna.fbcdn.net/v/t39.30808-6/284172422_2882226988741890_5545975022114951522_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGyiudiQf5b-pk3c1sFlSs2-SpATxsz2Cv5KkBPGzPYK12_KomPzVLpbJQphq3F3Q86S0sSlW5ySBqMep0OmhFq&_nc_ohc=x87BNVFIKO0Ab71pXdC&_nc_ht=scontent.famm5-1.fna&oh=00_AfC_zCiqSN-7nBG36SMVIeT3wHzbPrJSO6-zFnE0bh8s2w&oe=662170EC',
+        img:'https://pvt.jo/uploads/filemanager/Restaurants/e28c2eb2e503cacfa05fa26ffe47dd5c-al-quds.jpg',
         name:'Al-Quds Falafel',
         category:['Fast Food', 'Middle Eastern', 'Vegan','Jordanian'],
         location:'https://www.google.com/maps?rlz=1C1SQJL_enJO994JO994&vet=12ahUKEwjIoK6kqrSFAxWFhP0HHRrgCsEQ8UF6BAgWEAM..i&lei=xcgUZoiqLoWJ9u8PmsCriAw&cs=0&um=1&ie=UTF-8&fb=1&gl=jo&sa=X&geocode=KU9uuAt_XxsVMf0pbED8sagP&daddr=WWW8%2B8W9,+Ali+Ben+Abi+Taleb+St.,+Amman',
