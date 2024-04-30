@@ -8,12 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(function(){
-        $('#nav').load('nav.html'); 
-        $('#footer').load('footer.html');
-        $('#social-wall').load('social-wall.html');
-        $('#statistics').load('statistics.html');
-        $('#form').load('form.html');
-        $('#FAQ').load('FAQ.html');
+        $('#nav').load('nav.php'); 
+        $('#footer').load('footer.php');
+        $('#social-wall').load('social-wall.php');
+        $('#statistics').load('statistics.php');
+        // $('#form').load('form.php');
+        $('#FAQ').load('FAQ.php');
 
     })
          
@@ -137,10 +137,9 @@
     </div>
 
     <div id="social-wall"></div>
-    <div id="form"></div>
-    <div id="statistics"></div>
+    <!-- <div id="form"></div> -->
     <div id="FAQ"></div>
-
+    <div id="statistics"></div>
     <footer id="footer"></footer>
 
 </body>
