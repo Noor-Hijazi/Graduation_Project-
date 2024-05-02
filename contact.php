@@ -1,218 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>contact as</title>
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>Contact Us</title>
+
+        <!--Aswome  Font  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />       
+        <!-- Main CSS -->
+        <link rel="stylesheet" type="text/css" href="css/contentus.css">
 
 
 </head>
-<style>
+
+<body>
+    <?php
+    include ("nav.html");
+    ?>
+
+    <div class="contect">
+        <div class="continer">
+            <!-- Start content -->
+            <div class="contactUs ">
+                <h1>Contact Us </h1>
+                <P>We're here to help you craft unforgettable moments. Reach out to us and let your journey into a world
+                    of excitement and beauty begin.</p>
+            </div> <!-- Start content -->
+
+
+            <!-- Start Information -->
+
+            <div class="formInfo">
+              
+                
+                <form>
+                    <h2>Send Message</h2>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="Name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email">
+                    <label for="message"  >Your Message</label>
+                    <textarea name="message"row="5"placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+
+                </form>
+
+                <div class="Info">
    
-  
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'poppins',sans-serif;
-    }
-   
-     .contact
-     {
-        position: relative;
-        min-height: 100vh;
-        padding: 80px 100px;
-        display: flex;
-        justify-content: center;
-        align-items:center ;
-        flex-direction: column;
-        
-   
 
-    }
-    .contact .content{
-        max-width: 800px;
-        text-align: center;
-    }
-    .contact .content h2{
-        font-size: 36px;
-        font-weight: 500;
-        color:rgb(17, 17, 17);
-    }
-    .contact .content p
-    {
-       font-weight:300;
-       color:rgb(12, 11, 11); 
-    }
-    .container
-    {
-       width:100%;
-       display:flex;
-       justify-content: center;
-       align-items: center;
-       margin-top: 40px;
+                   
+                    <div class="box">
+                        <div class="flexing">
+                        <i class="fa-solid fa-envelope"></i>
+                            <h3>Email</h3>
+                        </div>
+                            <p>info@wonderwise.com</p>
+                    </div>
+                    <div class="box">
+                        <div class="flexing">
+                       <i class="fa-solid fa-phone"></i>
+                        
+                            <h3>phone</h3></div>
+                            <p>009626567855</p>
+                        </div> 
+                        <div class="box">
+                        <div class="flexing">
+                        <div class="socials">
+                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                 <a href ="#"><i class="fa-brands fa-instagram"></i></a>
+                 <a href ="#"><i class="fa-brands fa-x-twitter"></i></a>
+             </div>
+                           
+                        </div>
+                            
+                    </div></div>
 
-    }
-    .container .contactInfo
-    {
-       width: 50%;
-       display: flex;
-       flex-direction: column; 
-    }
-    .container .contactInfo .box
-    {
-       position: relative;
-       padding:40px 0;
-       display: flex;
-    }
-    .container .contactInfo .box .icon
-    {
-      min-width: 60px;
-      height: 60px;
-      background: #f3e3b6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 30%;
-      font-size: 22px;
-
-    }
-    .container .contactInfo .box .text
-    {
-     display: flex;
-     margin-left: 30px;
-     font-size: 16px;
-     color: black;
-     flex-direction: column;
-      
-    }
-  
-    .contactForm
-    {
-        width:30%;
-        padding: 30px;
-        background: #f3e3b6;
-        border-radius: 10%;
-    }
-    .contactForm h2
-    {
-        font-size: 30px;
-        color:#333;
-        font-weight: 500;
-    }
-    .contactForm .inputbox
-    {
-      position: relative;
-      width: 100%;
-      margin-top: 5px;
-
-    }
-    .contactForm .inputbox input,
-    .contactForm .inputbox textarea
-    {
-        width: 100%;
-        padding: 10px 0;
-        font-size: 10px;
-        margin: 10px 0;
-        border: 2px solid #ccc;
-      
-        outline: none;
-        resize: none;
-    }
-    .contactForm .inputbox span
-    {
-        position: absolute;
-        left: 2px;
-        padding: 9px 0 ;
-        font-size: 13px;
-        margin:10px 0;
-        pointer-events: none;
-        transition: 0.5s;
-        color: #666;
-    }
-    .contactForm .inputbox input:focus ~ span,
-    .contactForm .inputbox input:valid ~ span,
-    .contactForm .inputbox textarea:focus ~ span,
-    .contactForm .inputbox input:valid ~ span
-    {
-        color: #e91e63;
-        font-size: 12;
-        transform:translateY(-20px);
-    }
-    .contactForm .inputbox input[type="submit"]
-    {
-        width:100px;
-       
-        background: white;
-        color: black;
-        cursor: pointer;
-        padding: 5px;
-        font-size: 18px;
-        border-radius:10%;
-    }
- 
-  
-    </style>
-<body >
-   <header></header>
-  
-<section class="contact" >
-    <div class="content">
-        <h2>Contact Us </h2>
-        <P>We're here to help you craft unforgettable moments. Reach out to us and let your journey into a world of excitement and beauty begin.</p>
-</div>
-<div class= "container">
-    <div class="contactInfo">
-        <div class="box">
-            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="text">
-                <h3>Address</h3>
-                <p>Amman - Jordan</p></div>
-
-</div>
-<div class="box">
-            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-            <div class="text">
-                <h3>Email</h3>
-                <p>info@wonderwise.com</p></div>
-
-</div>
-<div class="box">
-            <div class="icon"><i class="fa-solid fa-phone"></i></div>
-            <div class="text">
-                <h3>phone</h3>
-                <p>009626567855</p></div>
-
-</div>
-</div>
-<div class="contactForm">
-    <form>
-        <h2>Send Message</h2>
-        <div class="inputbox">
-            <input type="text" name="" required="required">
-            <span>Full Name</span> 
+                    </div>
+                </div>
+            </div>
+            <!-- end Information -->
         </div>
-        <div class="inputbox">
-            <input type="text" name="" required="required">
-            <span>Email</span> 
-        </div>
-        <div class="inputbox">
-            <textarea required="required"></textarea>
-            <span>Type your Message...</span> 
-        </div>
-        <div class="inputbox">
-            <input type="submit" name="" value="Send"> 
-        </div>
-    </form>
-</div>
-</div>
-</section>
+    </div>
+    </div>
+    <!-- End Information -->
 
 
 
-<footer></footer>
-<script src="JS/nav.js"></script>
+    <footer></footer>
+    <script src="JS/nav.js"></script>
 
 
 </body>
+
 </html>
