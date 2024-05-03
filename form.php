@@ -65,10 +65,16 @@
         .btn[type="submit"]:hover {
             background-color: #BFEA7C;
         }
+        .content{
+        padding-top: 150px;
+    padding-bottom: 150px;}
     </style>
 </head>
 <body>
-    <header></header>
+    <?php
+        include_once("nav.html");
+    ?>
+    <div class="content">
     <div class="form-box">
         <h2>Share your experience</h2>
         <form action="#" method="POST" enctype="multipart/form-data">
@@ -96,7 +102,7 @@
 
             <button class="btn" type="submit">Submit</button>
         </form>
-    </div>
+    </div></div>
     <footer></footer>
      <script src="JS/nav.js"></script>
 </body>

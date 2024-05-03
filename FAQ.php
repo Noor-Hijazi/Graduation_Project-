@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="FAQ.css">
-    <script src="FAQ.js" defer></script>
+    <link rel="stylesheet" href="css/FAQ.css">
+    <script src="JS/FAQ.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>WanderWise</title>
+
 </head>
 <body>
-
+<div class="content">
    <div class="wrapper">
     <h1>FAQs</h1>
     <div class="faq">
@@ -59,6 +59,6 @@
     </div>
 
    </div>
-    
+   </div>
 </body>
 </html>

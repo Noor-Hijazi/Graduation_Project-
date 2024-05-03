@@ -39,9 +39,13 @@
   
   /* End Globle Featers  */
 nav{    
-    box-shadow: 0px -6px 17px 0px #eeeeee;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
     background-color: #fffffffc;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 
 }
 nav .continer{
@@ -66,6 +70,9 @@ nav .menu-list{
     gap: 22px;
  
 } 
+nav .menu-list .more:hover{
+  cursor: pointer;
+}
 .menu-list li{
   padding:5px;
   transition:color .5s ,transform 0.5s;  
@@ -93,6 +100,9 @@ color: black;
 .more {
   position: relative;
 }
+.more:hover{
+  cursor: pointer;
+}
 nav li.more .content{
   z-index:1;
   width:200px;
@@ -101,7 +111,7 @@ nav li.more .content{
   top: 62px;
   right: -80px;
   background-color: #fffffffc;
-  padding: 28px 5px;
+  padding: 28px 40px;
  
 }
 nav li.more .content li{
@@ -137,7 +147,7 @@ nav li.more .content li i.display{
    nav .menu-list{
       display: none;;
       position: absolute;
-      top: 62px;
+      top: 84px;
       left: 0;
       background-color: #fffffffc;
       padding: 28px 5px;

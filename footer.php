@@ -89,22 +89,23 @@ footer{
     <footer>
         <div class="footerContainer">
          <h1><center>wanderwise</h1>
-             <p class="footer-text">"Explore the enchanting beauty of our tourist destinations. One visit will create unforgettable memories. Travel with us and tell endless stories."
+             <p class="footer-text">"Explore the enchanting beauty of our tourist destinations. One visit will create unforgettable memories.<br> Travel with us and tell endless stories."
              </center>   </p>
           <div class="footerNav">
                  <ul>
-                     <li><a href="#">Home</a></li>
-                     <li><a href="about.html">About Us</a></li>
-                     <li><a href="#">Hotels</a></li>
-                     <li><a href="#">Restaurant</a></li>
-                     <li><a href="#">Cars</a></li>
-                     <li><a href="contact.html">Contact Us</a></li>
+               
+                     <li><a href="index.php">Home</a></li>
+                     <li><a href="about.php">About Us</a></li>
+                     <li><a href="hotel.php">Hotels</a></li>
+                     <li><a href="restaurant.php">Restaurant</a></li>
+                     <li><a href="cars.php">Cars</a></li>
+                     <li><a href="contact.php">Contact Us</a></li>
                  </ul>
              </div>
              <div class="socials">
                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                 <a hreh ="#"><i class="fa-brands fa-instagram"></i></a>
+                 <a href ="#"><i class="fa-brands fa-instagram"></i></a>
                  <a href ="#"><i class="fa-brands fa-x-twitter"></i></a>
              </div></div>
      </footer>

@@ -1,0 +1,126 @@
+/* Start Globle Featers */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box  ;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    --border-color:#0000002e;
+  }
+  body{
+    margin:0;
+    padding:0; 
+    font-family: "Cairo", sans-serif;
+  }
+  @media (max-width:767px){
+    .continer{
+        width:70%;
+        margin:0 auto;
+    }
+  }
+  @media (min-width:768px){
+    .continer{
+        width:70%;
+        margin:0 auto;
+    }
+  }
+  @media (min-width:992px){
+    .continer{
+        width:80%;
+        margin:0 auto;
+    }
+  }
+  /* End Globle Featers  */
+ 
+  /* Start information */
+  .info{
+      padding-top:100px;
+  }
+  .info .continer{
+    padding-bottom:  50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;;
+  }
+  @media (max-width:768px){
+    .info .continer{
+      display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+  }
+  .info .continer .image-feature{
+    max-width: 400px;
+    background-color: #eeeeee3b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info .continer .image-feature img{
+    width:95%;
+    border-radius: 50%;;
+  }
+  .info .continer .information li {
+    margin-top: 12px;
+    font-size: 25px;
+  }
+  .info .continer .information li span{
+    font-weight: bold;
+  }
+ 
+
+  /* End information */
+
+  /* Start feedback */
+  .feedback{
+    margin-top:50px;
+    padding:10px;
+    padding-bottom: 100px;
+  }
+  .feedback .continer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .feedback .continer ul li {
+    margin-bottom: 10px;;
+    background-color:#eee;
+    padding: 10px 20px;
+    
+  }
+  .feedback .continer ul li .customer-name{
+    font-weight: bold;
+  }
+
+  .feedback-form .continer{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 150px;;
+  }
+  .feedback-form .continer form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap:10px;
+  } 
+  .feedback-form .continer form input{
+    padding:10px 20px;
+  }
+  .feedback-form .continer form input[type="submit"]{
+    border: none;
+    cursor: pointer;
+height:50px;
+    
+  }
+  .continer form input:focus,
+  .continer form textarea {
+    outline: none;
+  }
+  .continer form textarea {
+    padding:10px;
+  }
+  /* End feedback */

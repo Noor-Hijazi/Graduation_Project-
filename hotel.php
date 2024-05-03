@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="hotel.css" rel="stylesheet"/>
-    <script src="hotel.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>WanderWise</title>
-    <script>
-        $(function(){
-            $("#navbar").load("nav.html");
-            $("#footer").load("footer.html");
-        });
-    </script>
+        <!-- nornalize file -->
+        <link rel="stylesheet" href="css/normaliz.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/hotel.css">
+    <script src="JS/hotel.js" defer></script>
+    <title>Hotel</title>
 </head>
 <body>
-    <nav id="navbar"></nav>
-
+    <?php
+        include("nav.html");
+    ?>
     <div class="amman-img-container">
         <img class="amman-img" src="https://www.kone.ca/fr/Images/le-royal-hero-1440x670_tcm93-11647.jpg?v=3" alt="amman img">
         <div class="img-caption">
@@ -39,8 +36,9 @@
           
         <div class="hotel-container">
         </div>
-
-     <footer id="footer"></footer>
+        <footer></footer>
+    <script src="JS/nav.js"></script>
+     
         
     
 </body>

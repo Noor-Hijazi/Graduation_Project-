@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="restaurant.css">
-    <script src="restaurant .js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>WanderWise</title>
-    <script>
-        $(function(){
-            $("#navbar").load("nav.html");
-            $("#footer").load("footer.html");
-        });
-    </script>
+        <!-- Normalize style -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="css/restaurant.css">
+   
+    <!-- Main JS -->
+    <script src="Js/restaurant .js" defer></script>
+    <title>Restaurant</title>
 </head>
 <body>
 
-    <nav id="navbar"></nav>
 
+    <?php
+        include("nav.html");
+    ?>
     <div class="food-img-container">
     <img class="food-img" src="https://romerogroup.jo/wp-content/uploads/2022/05/6-traditional-authentic-jordanian-mediterranian-breakfast-mezze-main-page-scaled.jpg" alt="food img">
     <div class="img-caption">
@@ -36,8 +36,8 @@
       
     </div> 
  
-    <footer id="footer"></footer>
-
+    <footer></footer>
+    <script src="JS/nav.js"></script>
     
 </body>
 </html>

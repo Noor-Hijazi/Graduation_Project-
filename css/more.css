@@ -1,0 +1,115 @@
+/* Start Globle Featers */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box  ;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    --border-color:#0000002e;
+  }
+  body{
+    margin:0;
+    padding:0; 
+    font-family: "Cairo", sans-serif;
+  }
+  @media (max-width:767px){
+    .continer{
+        width:70%;
+        margin:0 auto;
+    }
+  }
+  @media (min-width:768px){
+    .continer{
+        width:70%;
+        margin:0 auto;
+    }
+  }
+  @media (min-width:992px){
+    .continer{
+        width:80%;
+        margin:0 auto;
+    }
+  }
+  /* End Globle Featers  */
+  .slider{
+    z-index: -1;
+    max-width:900px;
+    position: relative;
+    left:50%;
+    transform: translate(-50% , -5%);
+  }
+.slide{
+  
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+.slide img{
+    width:100%;
+    display: none;
+    border-radius: 10px;
+}
+img.displaySlide{
+    display: block;
+}
+
+.slider button{
+    position:absolute;
+    top:50%;
+    font-size:2rem;
+    padding:10px 15px;
+    background-color: transparent;
+    color:black;
+    border:none;
+    cursor: pointer;
+    margin:10px 20px;;
+    
+    
+}
+.slider .prev{
+    left: 0px;
+}
+.slider .next{
+    right:7px;
+}
+.info{
+  width:100%;
+}
+.info h2{
+  margin: 70px 20px 0px;
+}
+.info p{
+    padding: 20px;
+  
+    position: relative;
+    left:20px;
+    top:20px;
+    font-size: 20px;
+    word-spacing: 10px;;
+}
+/* End car info  */
+
+
+/*Start  Reservation  */
+.reservation{
+  width:100%;
+  padding-top:100px;
+  ;
+}
+.reservation .continer form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  justify-content: start;
+  align-items: start;
+}
+.reservation .continer form input{
+  width:50%;
+  padding:20px 10px;
+}
+.reservation .continer form input:focus{
+  outline: none;
+}
+/* End Reservation */
