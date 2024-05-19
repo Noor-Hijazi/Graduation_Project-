@@ -1,3 +1,8 @@
+<?php
+    require_once "includes/signup_view.inc.php";
+    require_once "includes/login_view.inc.php";
+    require_once "includes/config_session.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,44 +18,25 @@
     <link rel="stylesheet" type="text/css" href="css/sin.css">
 </head>
 
-<body>
-   
-        <!-- Start header -->
-     <!-- Start full page -->
-    <!-- <div class="full-page"> -->
- 
-        <!-- Start header -->
-  
-        <!-- End header -->
+<body> 
+
         <!-- Start content -->
         <div class="content">
             <div class="continer">
                 <h2>Sign up</h2>
-                <form action method="post">
-                    <label for="fname">First Name:</label>
-                    <input type="text" name="fname">
-
-                    <label for="lname">Last Name:</label>
-                    <input type="text" name="lname">
-
-                    <label for="email">Email:</label>
-                    <input type="email" name="email">
-
-                    <label for="pass">Password:</label>
-                    <input type="password" name="pass">
-
-                    <label for="language">language:</label>
-                    <select id="language" name="language">
-                        <option value="ar">Arabic</option> 
-                        <option value="en">English</option> 
-                        <option value="es">Spanish</option>
-                        <option value="fr">French</option>
-                    </select>
-                    <!-- Here include the Nationality -->
-                    <!-- <ul id="user-list"></ul> -->
-                    <input type="submit" value="Sign up">
+                <form method="POST" action="includes/signup.inc.php">
+        <!-- This function to save all info if we have any error -->
+                <?php
+                    inputes();
+            
+                ?>
+        <button type="submit">Signup</button>
+    </form>
+    <?php
+        check_signup_errors();
+    ?>
                 </form>
-                <p class="rest-par">Already have an account? <a href="login.php">Log in <i class="fa-thin fa-arrow-right"></i> </a>
+                <p class="rest-par">Already have an account? <a href="login.php">Login </a>
                 </p>
                 <p class="rest-par" style=" position: absolute; bottom: -5px;">Go back to <a href="index.php">Home</a></p>
                 <div>

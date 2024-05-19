@@ -20,4 +20,4 @@ function nextSlide() {
 }
 
 // Start the interval to automatically change slides every 5 seconds
-intervalId = setInterval(nextSlide, 3000);
+intervalId = setInterval(nextSlide,5000);

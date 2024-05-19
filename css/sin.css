@@ -106,7 +106,7 @@ cursor: pointer;
   .content{
     margin-top:100px;
     max-width:500px;
-    height: 650px;
+    max-height: fit-content;
     background-color:  #eed2a7cc;
     position: relative;
     border-radius: 12px;;
@@ -139,18 +139,24 @@ cursor: pointer;
     width: 100%;
     gap: 13px;
   }
+  .content .continer form div{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+  }
   .content .continer form input {
     height: 38px;
     border-radius: 9px;
     border: 0;
     border: 1px solid #e0b886d9;
   }
-  .content .continer form input[type="submit"]{
+  .content .continer form button[type="submit"]{
   background-color: #e0b786;
   color: white;
   font-size: 19px;
+  border: 1px solid #e0b786;
   }
-  .content .continer form input[type="submit"]:hover{
+  .content .continer form button[type="submit"]:hover{
       opacity: 0.7;
 } 
  .content .continer form select{
@@ -177,7 +183,9 @@ cursor: pointer;
     }
     .content .continer .rest-par a{
       text-decoration: underline;
-      color:white;
+      color:black;
     }
-  
+    .content .continer .redpara{
+    color:red;
+  }
   /* End content */

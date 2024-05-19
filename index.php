@@ -1,3 +1,6 @@
+<?php
+    include_once("nav.php");
+   ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,7 @@
     <title>Home</title>
 </head>
 <body>
-   <?php
-    include("nav.html");
-   ?>
+ 
    
    <div class="landing">
     <div class="img-slider">

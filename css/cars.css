@@ -132,9 +132,8 @@ body {
 
 .card .continer{
   width:100%;
-
-  
 }
+
 
 /* Icon */
 .card .continer i.display{
@@ -182,60 +181,85 @@ body {
 }
 .card  .items_and_filter .items{
   flex:1;
-  display: flex;
-  flex-direction: column;
-  gap:30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  gap:40px;
+  margin-left: 40px;;
 }
 .card  .items_and_filter .items .box{
-  max-width:95%;
-  height:200px;
-  display: flex;
-
-
+  width:100%;
   background-color:#cccccc0d;
   padding:10px;
   border-radius: 10px;;
+  
 }
 .card  .items_and_filter .items .box .info{
   max-width:450px;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   margin-left:10px;
+  flex-direction: column;
 
 }
 .card  .items_and_filter .items .box .info p {
-  padding: 2px 6px;
+  margin: 0;
+  padding: 15px 5px;
+  width: 100%;
+  position: relative;
+
+}
+.card  .items_and_filter .items .box .info p:not(:first-child)::after{
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:1px;
+  background-color: #77777730;
 }
 .card  .items_and_filter .items .box .info span{
   font-weight: bold;
 }
 .card  .items_and_filter .items .box .main_image {
   border-radius: 10px;;
-  max-height: 100%;;
+  max-width: 100%;
 }
 .card  .items_and_filter .items .box .reserve{
   flex:1;
   display:flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: end;
   gap:10px;
 }
-.card  .items_and_filter .items .box .reserve button{
-width:130px;
-height:40px;
-padding: 5px;
-background-color: var(--main-color);
+.card  .items_and_filter .items .box .reserve .button{
+background-color: #416D19;
 color:white;
-border: none;
-border-radius: 10px;
-cursor: pointer;;
+cursor: pointer;
+margin-top: 10px;;
+border: 2px solid #ddd;
+padding: 10px 30px;
+border-radius: 5px;
 }
-.card  .items_and_filter .items .box .reserve button:hover{
-opacity: 0.7;}
 
 
+.card  .filterCheckBox  input[type="submit"],
+.card  .filterCheckBox input[type="reset"]{
+  background-color: #416D19;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+  }
+  .card  .items_and_filter .items .box .reserve .button:hover,
+  .card  .filterCheckBox  input[type="submit"]:hover,
+  .card  .filterCheckBox input[type="reset"]:hover{
+  opacity: 0.7;
+  }
 @media (max-width:768px) {
   .card  .items_and_filter .items .box{
 	  max-width: 100%;
@@ -260,9 +284,10 @@ opacity: 0.7;}
     width: 100%;
     background: white;
     position: absolute;
-    top: 833px;
+    top: 700px;
     left: 0;
     padding: 10px;;
+    z-index: 100;
   }
   .card .continer i.display{
     display:flex;

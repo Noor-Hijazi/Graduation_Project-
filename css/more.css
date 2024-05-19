@@ -7,6 +7,7 @@
     list-style-type: none;
     text-decoration: none;
     --border-color:#0000002e;
+    --main-color:#E4D3B5;
   }
   body{
     margin:0;
@@ -32,84 +33,175 @@
     }
   }
   /* End Globle Featers  */
-  .slider{
-    z-index: -1;
-    max-width:900px;
-    position: relative;
-    left:50%;
-    transform: translate(-50% , -5%);
+
+
+
+  .landing{
+    padding-top: 100px;
   }
-.slide{
-  
-    width:100%;
-    margin: auto;
-    overflow: hidden;
-    
-}
-.slide img{
-    width:100%;
-    display: none;
-    border-radius: 10px;
-}
-img.displaySlide{
-    display: block;
+/* Adjust .content styling if necessary */
+.landing .content {
+  width: 100%;
+  max-height: 100%;
+  background-color: #eee;
+  z-index: 0; /* z-index set to 0 so that the slider remains within the content */
+  position: relative; /* To make child elements (buttons) positioned relative to this element */
+  padding: 5px 0px;
 }
 
-.slider button{
-    position:absolute;
-    top:50%;
-    font-size:2rem;
-    padding:10px 15px;
-    background-color: transparent;
-    color:black;
-    border:none;
-    cursor: pointer;
-    margin:10px 20px;;
-    
-    
+/* Slider styling remains similar */
+.slider {
+  max-width: 60%; /* This remains unchanged */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Use translateX only */
+  z-index: 1; /* Bring it in front of content */
 }
-.slider .prev{
-    left: 0px;
+
+/* The slide styling remains unchanged */
+.slide {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
-.slider .next{
-    right:7px;
+
+/* The slide images styling remains unchanged */
+.slide img {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
 }
-.info{
-  width:100%;
+
+img.displaySlide {
+  display: block;
 }
-.info h2{
-  margin: 70px 20px 0px;
+
+
+.slider button {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 10px 20px;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
 }
-.info p{
-    padding: 20px;
-  
-    position: relative;
-    left:20px;
-    top:20px;
-    font-size: 20px;
-    word-spacing: 10px;;
+
+
+.slider .prev {
+  left: -70px; 
 }
+
+.slider .next {
+  right: -70px;
+}
+
 /* End car info  */
 
-
-/*Start  Reservation  */
-.reservation{
-  width:100%;
+/* Start information  */
+.information{
   padding-top:100px;
-  ;
+  padding-bottom:100px;
 }
-.reservation .continer form{
+.information .continer{
   display: flex;
-  flex-direction: column;
-  gap:10px;
-  justify-content: start;
-  align-items: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 40px;
+  
 }
-.reservation .continer form input{
-  width:50%;
-  padding:20px 10px;
+@media (max-width:768px){
+  .information .continer{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
-.reservation .continer form input:focus{
-  outline: none;
+
+.information .continer .logincontent{
+
+  background-color: #eeeeee36;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
 }
-/* End Reservation */
+
+.information .continer .logincontent p:first-child{
+  border-bottom: 1px solid #77777769;
+  padding-bottom: 11px;
+}
+.information .continer .logincontent .button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-35%);
+  background-color: #416D19;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.information .continer .logincontent .button:hover{
+  opacity: 0.7;
+}
+
+
+.information .continer .info{
+  border: 1px solid #eee;
+  padding: 10px 25px;
+  width: 700px;
+}
+.information .continer .info .para{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+  border-bottom: 1px solid var(--border-color);
+}.information .continer .info .para span{
+  font-weight: bold;
+}
+.information .continer .info  table{
+    width:100%;
+    padding-top:20px;
+    padding-bottom: 20px;;
+}
+.information .continer .info  table thead th{
+  text-align: left;;
+  padding:10px;
+}
+
+
+.information .continer .info tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.information .continer .info tbody td {
+  padding: 10px; 
+  text-align: left; 
+}
+
+
+.information .continer .info th, td {
+  border: 1px solid #ddd; 
+}
+.information .continer .info tbody tr:nth-child(odd) {
+  background-color:#f5f5f5; 
+}
+
+.information .continer .info tbody tr:nth-child(even) {
+  background-color: white; 
+}
+/* End information  */
+
+
+
+

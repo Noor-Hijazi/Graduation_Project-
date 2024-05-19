@@ -1,3 +1,6 @@
+<?php
+    include ("nav.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,12 +17,8 @@
 </head>
 
 <body>
-    
-    <!-- Start Header -->
-    <?php
-        include("nav.html");
-    ?>
-    <!-- End Header -->
+
+
     <!-- Start landing -->
     <div class="landing">
         <div class="continer">
@@ -36,159 +35,146 @@
     <div class="card" style="margin-bottom: 600px;">
         <div class="continer">
             <div class="flexing">
-        <i class="fa-solid fa-arrow-down-short-wide display"></i>
-            <ul class="filterBox">
-                <li class="active" data-car=".all">All</li>
-                <li data-car=".petrol">Petrol</li>
-                <li data-car=".diesel">Diesel</li>
-                <li data-car=".electric">Electric</li>
-                <li data-car=".hybrid">Hybrid </li>
-            </ul></div>
-            
+                <i class="fa-solid fa-arrow-down-short-wide display"></i>
+            </div>
+
             <div class="items_and_filter">
+                <form id="brandFilterForm" action="#car" method="get">
                 <ul class="filterCheckBox">
-                    <h2>Filter</h2>
+                    <h2>Filters</h2>
                     <li>
                         <h4>Category</h4>
                         <ul>
-                            <li>
-                                <input type="checkbox">
-                                KIA
-
-                            </li>
-                            <li><input type="checkbox"> BMW</li>
-                            <li><input type="checkbox"> Marsidace</li>
-                            <li><input type="checkbox"> Honda</li>
-                            <li><input type="checkbox"> Others</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4> Price per day</h4>
-                        <ul class="price">
-
-                            <!-- Additionally to add the statistics -->
-                            <li>
-                                <input type="checkbox" class="check_price" data-price=".price_0_50"> JOD 0 - JOD 50
-
-                            </li>
-                            <li>
-                                <input type="checkbox" class="check_price" data-price=".price_50_100"> JOD 50 - JOD 100
-
-                            </li>
-                            <li>
-                                <input type="checkbox" class="check_price" data-price=".price_100_150"> JOD 100 - JOD
-                                150
-                            </li>
-
-                            <li><input type="checkbox" class="check_price" data-price=".price_150_200"> JOD 150 - JOD
-                                200 </li>
-                            <li><input type="checkbox" class="check_price" data-price=".price_200+"> JOD 200+ </li>
+                        <li>
+                            
+                            <li><input type="checkbox" name="brand[]" value="KIA"<?php echo isset($_GET['brand']) && in_array('KIA', $_GET['brand']) ? 'checked' : ''; ?>> KIA</li>
+                            <li><input type="checkbox" name="brand[]" value="BMW" <?php echo isset($_GET['brand']) && in_array('BMW', $_GET['brand']) ? 'checked' : ''; ?>> BMW</li>
+                            <li><input type="checkbox" name="brand[]" value="Mercedes"<?php echo isset($_GET['brand']) && in_array('Mercedes', $_GET['brand']) ? 'checked' : ''; ?>> Mercedes</li>
+                            <li><input type="checkbox" name="brand[]" value="Honda" <?php echo isset($_GET['brand']) && in_array('Honda', $_GET['brand']) ? 'checked' : ''; ?>> Honda</li>
+                            <li><input type="checkbox" name="brand[]" value="Others"<?php echo isset($_GET['brand']) && in_array('Others', $_GET['brand']) ? 'checked' : ''; ?>> Others</li>
                         </ul>
                     </li>
                     <li>
                         <h4>Transmission</h4>
                         <ul>
-                            <li><input type="checkbox"> Automatic</li>
-                            <li><input type="checkbox"> Manual</li>
+                            <li><input type="checkbox" name="transmission[]" value="automatic" <?php echo isset($_GET['transmission']) && in_array('automatic', $_GET['transmission']) ? 'checked' : ''; ?>> Automatic</li>
+                            <li><input type="checkbox" name="transmission[]" value="manual"<?php echo isset($_GET['transmission']) && in_array('manual', $_GET['transmission']) ? 'checked' : ''; ?>> Manual</li>
                         </ul>
                     </li>
                     <li>
-                        <h4>Review score</h4>
-
+                        <h4>Fuel</h4>
                         <ul>
-                            <li><input type="checkbox"> Very good +5</li>
-                            <li><input type="checkbox"> Good -4</li>
+                            <li><input type="checkbox" name="fuel[]" value="hybrid"<?php echo isset($_GET['fuel']) && in_array('hybrid', $_GET['fuel']) ? 'checked' : ''; ?>> Hybrid</li>
+                            <li><input type="checkbox" name="fuel[]" value="petrol"<?php echo isset($_GET['fuel']) && in_array('petrol', $_GET['fuel']) ? 'checked' : ''; ?>> Petrol</li>
+                            <li><input type="checkbox" name="fuel[]" value="electric"<?php echo isset($_GET['fuel']) && in_array('electric', $_GET['fuel']) ? 'checked' : ''; ?>> Electric</li>
                         </ul>
                     </li>
                     <li>
-                        <h4>Supplier</h4>
-                        <ul>
-
-                            <li><input type="checkbox"> Rozana</li>
-                            <li><input type="checkbox"> Benz</li>
-                        </ul>
+                        <input type="submit" value="Filter">
+                        <input type="reset" value="clear" onclick="clearForm()">
                     </li>
-                </ul>
-                <div class="items">
-                    <div class="box all hybrid" data-prices="price_200+">
-                        <img class ="main_image" src="images/cars/KIA/soul/kia_soul_2024_mep_dynamic_media_XL.jpg" alt="not found">
-                        <div class="info">
-                            <p><span>Name: </span> Soul 2024</p>
-                            <p><span>Type:</span> KIA</p>
-                            <p><span>Transmission:</span> Automatic</p>
-                            <p><span>Seats:</span> 4</p>
-                            <p><span>Color:</span> Selver</p>
-                            <p><span>Price:</span> 100 JOD</p>
-                            <p><span>Supplier:</span> Rozana</p>
-                            <p><span>Review score :</span> 5</p>
-                        </div>
-                        <div class="reserve">
-                           <a href="moreCar.php"><button>Reservation</button></a> 
-                        </div>
-                    </div>
-                    <div class="box all hybrid" data-prices="price_200+">
-                        <img class ="main_image" src="images/cars/KIA/soul/kia_soul_2024_mep_dynamic_media_XL.jpg" alt="not found">
-                        <div class="info">
-                            <p><span>Name: </span> Soul 2024</p>
-                            <p><span>Type:</span> KIA</p>
-                            <p><span>Transmission:</span> Automatic</p>
-                            <p><span>Seats:</span> 4</p>
-                            <p><span>Color:</span> Selver</p>
-                            <p><span>Price:</span> 100 JOD</p>
-                            <p><span>Supplier:</span> Rozana</p>
-                            <p><span>Review score :</span> 5</p>
-                        </div>
-                        <div class="reserve">
-                           <a href="moreCar.php"><button>Reservation</button></a> 
-                        </div>
-                    </div>
-                    <div class="box all hybrid" data-prices="price_200+">
-                        <img class ="main_image" src="images/cars/KIA/soul/kia_soul_2024_mep_dynamic_media_XL.jpg" alt="not found">
-                        <div class="info">
-                            <p><span>Name: </span> Soul 2024</p>
-                            <p><span>Type:</span> KIA</p>
-                            <p><span>Transmission:</span> Automatic</p>
-                            <p><span>Seats:</span> 4</p>
-                            <p><span>Color:</span> Selver</p>
-                            <p><span>Price:</span> 100 JOD</p>
-                            <p><span>Supplier:</span> Rozana</p>
-                            <p><span>Review score :</span> 5</p>
-                        </div>
-                        <div class="reserve">
-                           <a href="moreCar.php"><button>Reservation</button></a> 
-                        </div>
-                    </div>
-                    <div class="box all hybrid" data-prices="price_200+">
-                        <img class ="main_image" src="images/cars/KIA/soul/kia_soul_2024_mep_dynamic_media_XL.jpg" alt="not found">
-                        <div class="info">
-                            <p><span>Name: </span> Soul 2024</p>
-                            <p><span>Type:</span> KIA</p>
-                            <p><span>Transmission:</span> Automatic</p>
-                            <p><span>Seats:</span> 4</p>
-                            <p><span>Color:</span> Selver</p>
-                            <p><span>Price:</span> 100 JOD</p>
-                            <p><span>Supplier:</span> Rozana</p>
-                            <p><span>Review score :</span> 5</p>
-                        </div>
-                        <div class="reserve">
-                           <a href="moreCar.php"><button>Reservation</button></a> 
-                        </div>
-                    </div>
+                       
+                </ul></form>
+               
 
+    <div id ="car" class="items">
+    <?php
+    
+    
+    include_once("includes/db.inc.php");
 
-                </div>
+    $result = null;
+    $conditions = [];
+    $params = [];
+
+    // If the form is submitted using GET and has any filter criteria
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && (!empty($_GET['brand']) || !empty($_GET['transmission']) || !empty($_GET['fuel']))) {
+        // Get the filter values from the form
+        $brands = $_GET['brand'] ?? [];
+        $transmissions = $_GET['transmission'] ?? [];
+        $fuels = $_GET['fuel'] ?? [];
+        
+        // Add conditions and parameters based on selected brands
+        if (!empty($brands)) {
+            $placeholders = implode(',', array_fill(0, count($brands), '?'));
+            $conditions[] = "brand IN ($placeholders)";
+            $params = array_merge($params, $brands);
+        }
+        
+        // Add conditions and parameters based on selected transmissions
+        if (!empty($transmissions)) {
+            $placeholders = implode(',', array_fill(0, count($transmissions), '?'));
+            $conditions[] = "transmision IN ($placeholders)";
+            $params = array_merge($params, $transmissions);
+        }
+
+        // Add conditions and parameters based on selected fuels
+        if (!empty($fuels)) {
+            $placeholders = implode(',', array_fill(0, count($fuels), '?'));
+            $conditions[] = "fuel IN ($placeholders)";
+            $params = array_merge($params, $fuels);
+        }
+        
+        // Combine conditions into a single WHERE clause
+        if (!empty($conditions)) {
+            $sql = "SELECT * FROM car WHERE " . implode(" AND ", $conditions);
+        } else {
+            $sql = "SELECT * FROM car";
+        }
+    } else {
+        // If no filter criteria are provided, fetch all results
+        $sql = "SELECT * FROM car";
+    }
+    $stmt = $pdo->prepare($sql);
+
+    try {
+        $stmt->execute($params);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        echo "Database error: " . htmlspecialchars($e->getMessage());
+    }
+
+    // Display the filtered results
+    if ($result && count($result) > 0) {
+        foreach ($result as $row) {
+            echo '<div class="box">';
+            echo '<img class="main_image" src="' . htmlspecialchars($row['main_image']) . '" alt="Car Image">';
+            echo '<div class="info">';
+            echo '<p><span>Name: </span>' . htmlspecialchars($row['name']) . '</p>';
+            echo '<p>' . htmlspecialchars($row['brand']) . ' - ' . htmlspecialchars($row['transmision']) . ' - ' . htmlspecialchars($row['fuel']) . '</p>';
+            echo '<p><span>Price per day:</span> ' . htmlspecialchars($row['rental_price']) . ' JOD</p>';
+            echo '</div>';
+            echo '<div class="reserve">';
+            echo '<a class="button" href="moreCar.php?ID={'.$row['id'].'}\">Details</a>';
+            echo '</div>';
+            echo '</div>';
+        }
+    } else {
+        // Display a message if no results were found
+        echo "No Record Found in Car";
+    }
+    ?>
+</div>
+
             </div>
         </div>
     </div>
     <!-- End filters and cards -->
-    <!-- Start Footer -->
-    <footer>
 
-    </footer>
+
+
+
+    <!-- Start Footer -->
+   <<?php
+    include_once("footer.php");
+   ?>
     <!-- End Footer -->
+
+
+
     <!-- JavaScript -->
-   
-    <script src="JS/nav.js"></script> 
+
+  
     <script src="JS/car.js"></script>
 </body>
 

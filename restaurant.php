@@ -1,3 +1,6 @@
+<?php
+    include ("nav.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +18,7 @@
 <body>
 
 
-    <?php
-        include("nav.html");
-    ?>
+
     <div class="food-img-container">
     <img class="food-img" src="https://romerogroup.jo/wp-content/uploads/2022/05/6-traditional-authentic-jordanian-mediterranian-breakfast-mezze-main-page-scaled.jpg" alt="food img">
     <div class="img-caption">

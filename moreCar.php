@@ -1,76 +1,180 @@
+<?php
+
+    include ("nav.php");
+    require_once 'includes/db.inc.php';
+    require_once 'includes/carDetail_model.inc.php' ;
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More</title>
+    <title>Details</title>
     <link rel="stylesheet" href="css/normaliz.css">
     <link rel="stylesheet" href="css/more.css">
+    
 </head>
 
-<body>
-    <!-- Start Header -->
-    <?php 
-        include("nav.html");
-    ?>
-    <!-- End Header -->
+
+<?php
+    // Check if 'ID' parameter is provided in the URL
+    if (isset($_GET['ID'])) {
+        $id = trim($_GET['ID'], '{}\\'); // Trim any curly braces and backslash to get just the id 
+
+        // Convert the ID to an integer for safe use
+        $carId = (int)$id;
+        //function from model
+      $result=  get_car_detail( $pdo , $carId);
+        ?>
     <!-- Start Landing -->
     <div class="landing" >
         <div class="continer">
-            <h1 style="margin: 50px 0px">Kia Niro EV</h1>
+<div class ="content">
             <div class="slider" style="z-index: -1;">
+            <?php
+                        // Check if any results were returned
+                if ($result) {
+                    // Display the images from the fetched data
+                    echo '<div class="slide">';
+                    echo '<img src="' . htmlspecialchars($result['main_image']) . '" alt="Main image not found">';
+                    echo '<img src="' . htmlspecialchars($result['image_one']) . '" alt="Image one not found">';
+                    echo '<img src="' . htmlspecialchars($result['image_two']) . '" alt="Image two not found">';
+                    echo '<img src="' . htmlspecialchars($result['image_three']) . '" alt="Image three not found">';
+                    echo '</div>';
+                } else {
+                    // Handle the case where no data is found for the provided ID
+                    echo '<p>No data found for the provided car ID.</p>';
+                }
 
-                <div class="slide">
-                    <img src="images/cars/KIA/niro/kia_niro-ev-2024_asset_carousel_1.jpg" alt="not found">
-                    <img src="images/cars/KIA/niro/kia_niro-ev-2024_asset_carousel_1.jpg" alt="not found">
-                    <img src="images/cars/KIA/niro/kia_niro-ev-2024_asset_carousel_2.jpg" alt="not found">
-                </div>
-                <button class="prev" onclick="prevSlide()">&#10094</button>
-                <button class="next" onclick="nextSlide()">&#10095</button>
-            </div>
-            <!-- Start car info -->
-            <div class="info">
-                <h2>Overview</h2>
-                <p>The subcompact Niro EV is the bite-sized appetizer to Kia's growing buffet of electric SUVs. Smaller
-                    than EVs such as the Hyundai Ioniq 5, the Ford Mustang Mach-E, and the Volkswagen ID.4, it's also
-                    more affordable. The Niro's exterior design turns heads, especially in one of its striking two-tone
-                    paint schemes. Its interior looks almost as stylish and modern as its exterior and features digital
-                    instruments and eco-friendly materials. Driving range is a workable EPA-estimated 253 miles per
-                    charge, and the Niro's 201-horsepower electric motor moves it along with acceptable pep, though it
-                    lacks the strong off-the-line acceleration that many EVs offer. Nor is it capable of ultra-fast
-                    charging like Kia’s other EVs. It offsets those shortcomings with a generally pleasant driving
-                    personality and a price that’s as much as several thousand dollars less than most key rivals’.</p>
-            </div>
-            <!-- End car info -->
-        </div>
-    </div>
-    <!-- End Landing -->
+            ?>
 
-    <!-- Start Resevation  -->
-    <div class="reservation" style="margin-bottom: 100px;">
-        <div class="continer">
-            <h1>Resevation</h1>
-            <form action="" method="post">
-                <label for="fullname">Full Name</label>
-                <input type="text" name="fullname" id="fullname" placeholder="username">
-                <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone" placeholder="phone number">
-                <label for="pickup-date">Pickup-date</label>
-                <input type="datetime" name="pickup-date" id="pickup-date" placeholder="Pickup date">
-                <label for="return_date">Return_date</label>
-                <input type="datetime" name="return_date" id="return_date" placeholder="Return date">
-                <input type="submit" value="Reserve">
-            </form>
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+            </div></div>
+
         </div>
-    </div>
-    <!-- End Resevation  -->
-    <!-- Start Footer -->
-    <footer></footer>
+    </div> 
+
+    <div class="information">
+    <div class="continer">
+        <!-- continue side -->
+        <?php
+        if ($result) {
+            if(isset($_SESSION["user_id"])){
+        echo '<div class="logincontent">
+                <p>Login to see the final fare and make a reservation</p>
+                <p>pricing per day : '.$result['rental_price'].' JOD</p>
+                <a class="button" href="reservationcar.php?ID={'.$result['id'].'}\"> continue</a>
+            </div>';
+        }
+        else{
+            // if the usr didn't login
+            $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
+            echo '<div class="logincontent">
+            <p>Login to see the final fare and make a reservation</p>
+            <p>pricing per day : '.$result['rental_price'].' JOD</p>
+           
+            <a class="button" href="login.php">login</a>
+        </div>';
+        
+        }
+        echo '<!-- informtion -->
+
+        <div class="info">
+        <h2>Car name : <span style ="font-weight: 100;">' .$result['name'].'</span> </h2>
+            <div class="para">
+
+            <p><span>Brand : </span>'.$result['brand']. '</p>
+            <p><span>Fual : </span>'.$result['fuel']. ' </p>
+            <p><span>Transmtion : </span> '.$result['transmision']. '</p>
+            <p><span>kms Driven : </span> '.$result['kms_driven']. ' km/hr</p>
+        </div>
+            <h2>Car Details</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Car Name</td>
+            <td>'.$result['name']. '</td>
+        
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td>'.$result['brand']. '</td>
+          
+        </tr>
+        <tr>
+            <td>Transmission</td>
+            <td>'.$result['transmision']. '</td>
+           
+        </tr>
+        <tr>
+            <td>Fuel Type</td>
+            <td>'.$result['fuel']. '</td>
+          
+        </tr>
+        <tr>
+            <td>Model Year</td>
+            <td>'.$result['model']. '</td>
+           
+        </tr>
+        <tr>
+            <td>Count</td>
+            <td>'.$result['number_of_car']. '</td>
+            
+        </tr>
+        <tr>
+        <td>Seat</td>
+        <td>'.$result['seats']. '</td>
+        
+    </tr>
+        <tr>
+            <td>Available</td>
+            <td>';}?>
+
+            <?php
+             if ($result) {
+            if($result['available'] == 1){
+                  echo "Yes";  
+
+            }
+            else{
+                echo "False";
+            }
+        '</td>
+            
+        </tr>
+';}?>
+    </tbody>
+</table> 
+        </div>
+</div>
+</div>
+<!-- End information  -->
+
+
+   
+
+
+        <?php }else {
+                // Handle the case where no ID is provided in the URL
+                echo '<p>No ID provided in the URL.</p>';
+            }?>
+       <!-- Start Footer -->
+       <footer></footer>
     <!-- End Footer -->
  
     <script src="JS/more.js"></script>
     <script src="JS/nav.js"></script>
-</body>
+
+    </body>
 
 </html>
