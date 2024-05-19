@@ -1,0 +1,71 @@
+CREATE TABLE users(
+	id INT NOT NULL AUTO_INCREMENT ,
+    username VARCHAR(30) NOT NULL ,
+    pwd VARCHAR(255) NOT NULL,
+    email VARCHAR (100) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    role VARCHAR(100) NOT NULL DEFAULT 'user',
+    PRIMARY KEY(id)
+);
+
+
+CREATE TABLE car (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    brand VARCHAR(200) NOT NULL,
+    main_image TEXT NOT NULL,
+    transmission VARCHAR(200) NOT NULL,
+    fuel VARCHAR(200) NOT NULL,
+    seats INT CHECK (seats > 0),
+    rental_price DECIMAL(10, 2) NOT NULL,
+    model VARCHAR(200) NOT NULL
+);
+
+
+ALTER TABLE car_detail
+ADD CONSTRAINT car_detailFK
+FOREIGN KEY (carID) REFERENCES car(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+
+
+ALTER TABLE car_rental
+ADD CONSTRAINT car_rentalFK_car
+FOREIGN KEY (carID) REFERENCES car(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE car_rental
+ADD CONSTRAINT car_rentalFK_user
+FOREIGN KEY (userID) REFERENCES users(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+CREATE TABLE car_detail (
+    id INT NOT NULL PRIMARY KEY,
+    main_one TEXT NOT NULL,
+    main_two TEXT,
+    main_three TEXT,
+    color VARCHAR(200) NOT NULL,
+    number_of_car INT CHECK (number_of_car >= 0),
+    available BOOLEAN DEFAULT TRUE,
+    kms_driven DECIMAL(10, 2) NOT NULL,
+    carID INT
+);
+
+
+CREATE TABLE car_rental (
+    id INT NOT NULL PRIMARY KEY,
+    resevtion_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    location_from TEXT NOT NULL,
+    location_to TEXT NOT NULL,
+    number_of_car INT NOT NULL,
+    driving_license TINYINT(1),
+    driving_license_image TEXT,
+    payment_method VARCHAR(255) DEFAULT 'cash',
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    userID INT NOT NULL,
+    carID INT NOT NULL
+);

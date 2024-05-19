@@ -20,7 +20,7 @@
         <div class="continer">
         <h2 style="margin-top: 30px;">Reset your password</h2>
             <p class="login-par">No sweat! Input your email below and we'll send you instructions to reset it.</p>
-            <form action="forget-pass.php" method="post">
+            <form action="includes/forettingpwd.inc.php" method="post">
                 <label for="email">Email:</label>
                 <input type="email" name="email">
                 <input type="submit" value="Send">

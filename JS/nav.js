@@ -9,7 +9,7 @@ function loadContent(url, selector) {
 
 
 // Load the nav bar
-loadContent('nav.html', 'header');
+// loadContent('nav.php', 'header');
 
 // // Load the footer
 loadContent('footer.php', 'footer');

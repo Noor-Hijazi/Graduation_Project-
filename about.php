@@ -1,3 +1,6 @@
+<?php
+    include ("nav.php");
+    ?>
 <!DOCTYPE html>
 <html lang="ar">
 
@@ -13,9 +16,7 @@
 </head>
 
 <body>
-    <?php
-    include ("nav.html");
-    ?>
+  
 
 <!-- Start Landing -->
     <div class="landing">

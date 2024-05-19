@@ -1,3 +1,8 @@
+<?php
+    require_once "includes/signup_view.inc.php";
+    require_once "includes/login_view.inc.php";
+    require_once "includes/config_session.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,21 +35,38 @@
                 <h2>Welcome Back</h2>
                 <p class="login-par">Login to WanderWise</p>
                 <p class="pefect-par">Get a perfect trip in Jordan</p>
-                <form action method="post">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email">
-                    <label for="pass">Password:</label>
-                    <input type="password" name="pass">
-                    <input type="submit" value="Log in">
+                <?php
+    //logout in nav
+        if(!isset($_SESSION["user_id"])){?>
+                <form method="POST" action="includes/login.inc.php">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" >
+                    </div>
+                    <button type="submit">Login</button>
                 </form>
+      <?php  }
+?>    
+    
+   
+    <?php
+        check_login_errors();
+    ?>
+
                 <p class="rest-par">Reset <a href="forget-email.php">forgotten password</a>
                     or<a href="signup.php"> sign-up</a> if you don't have an account
                     yet.
                 </p>
-                <p class="rest-par" style=" position: absolute; bottom: -5px;">Go back to <a href="index.php">Home</a></p>
+                <p class="rest-par" style=" position: absolute; bottom: -15px;">Go back to <a href="index.php">Home</a></p>
                
                     <!-- End content -->
                 </div>
+        
+   
 </div>    <!-- End full page -->
 <script src="JS/navigation.js"></script>
 </body>

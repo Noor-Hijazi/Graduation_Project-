@@ -1,3 +1,8 @@
+<?php
+    include_once('nav.php');
+  
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +14,22 @@
         .form-box {
             max-width: 400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 150px;
+            margin-bottom: 150px;
         }
 
         /* Form styling */
         form {
             
             margin-top: 20px;
-            
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+                    
             
         }
 
@@ -64,38 +74,46 @@
         button[type="submit"]:hover {
             background-color: #0056b3;
         }
+        .container{
+            margin: 150px auto;
+            text-align: center;
+            font-size: 25px;;
+            color:red;
+
+        }
     </style>
 </head>
 <body>
-    <header></header>
+
+<?php
+          if(isset($_SESSION["user_id"])){?>
     <div class="form-box">
         <h2>Share your experience</h2>
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        
+        <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="id" name="id" value ="<?php echo  $_SESSION["user_id"]?>">
 
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" required>
+        <label for="username">Username</label>
+            <input type="text" id="username" name="username" value ="<?php echo $_SESSION["user_username"]?>">
 
-            <label for="experience">Experience:</label>
-            <textarea id="experience" name="experience" required></textarea>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder ="Location name">
 
-            <label for="photo">Upload Photo:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <label for="experience">Experience</label>
+            <textarea id="experience" name="experience" placeholder="Trip experience with a guide"></textarea>
 
-            <label for="rating">Rating Guide:</label>
-            <select id="rating" name="rating" required>
-                <option value="">Select Rating</option>
-                <option value="1">1 Star</option>
-                <option value="2">2 Stars</option>
-                <option value="3">3 Stars</option>
-                <option value="4">4 Stars</option>
-                <option value="5">5 Stars</option>
-            </select>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        <input type="file" name="image" accept="image/*">
+        <button type="submit" name="submit">Share </button>
+    </form>
+    </div><?php }
+    else{
+    ?>
+    <div class="container">
+        <div >You must login first</div>
+        <div><a href="login.php">Login</a></div></div>
+    <?php
+    }?>
+    
     <footer></footer>
      <script src="JS/nav.js"></script>
 </body>

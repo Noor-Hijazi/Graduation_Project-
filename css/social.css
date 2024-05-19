@@ -83,23 +83,22 @@ section{
   padding-bottom: 50px;
 }
 .gallery .continer{
-display: flex;
-flex-wrap: wrap;
-gap:10px;
-align-items: center;
-justify-content: center;
+
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+gap:20px;
 
 }
 
 .gallery .image-container {
   position: relative;
-
-  width: fit-content;
+  width: 100%;
 
 }
 
 .image-container img {
   border-radius: 5px;
+  max-width:100%;
 }
 .gallery .image-container p{
   margin: 0;

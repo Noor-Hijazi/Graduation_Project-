@@ -1,3 +1,6 @@
+<?php
+    include ("nav.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +18,7 @@
 
 <body>
     <!-- Start header -->
-    <?php
-        include("nav.html");
-    ?>
+
     <!-- End header -->
     <div class="info">
         <div class="continer" style="    padding-top: 150px;">

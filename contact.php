@@ -1,3 +1,6 @@
+<?php
+    include ("nav.php");
+    ?>
 <!DOCTYPE html>
 <html>
 
@@ -13,9 +16,6 @@
 </head>
 
 <body>
-    <?php
-    include ("nav.html");
-    ?>
 
     <div class="contect">
         <div class="continer">

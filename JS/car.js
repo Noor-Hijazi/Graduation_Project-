@@ -2,21 +2,22 @@
 
 // this code for filtering by li  (Top filtring)
 let lis = document.querySelectorAll(".filterBox li");
-let cards = document.querySelectorAll(".items_and_filter .items .box");
-let checkPrice = document.querySelectorAll(".items_and_filter .filterCheckBox .price li input " );
+let cards = document.querySelectorAll(".items .box");
 
 
 // action on li
 lis.forEach((li) => {
 
-    li.addEventListener("click", function() {//this fun to remove and add the active class for filtring box
+    li.addEventListener("click", function() {
+        //this fun to remove and add the active class for filtring box
         lis.forEach((li) => {
             li.classList.remove("active");
         });
         this.classList.add("active");
     });
 
-    li.addEventListener("click",function() { //this fun for showing or hide the boxs
+    li.addEventListener("click",function() {
+        //this fun for showing or hide the boxs
         cards.forEach((card) => {
             card.style.display = "none";
           }); console.log(document.querySelectorAll(this.dataset.car));
@@ -41,6 +42,7 @@ lis.forEach((li) => {
         }
 
         const filterIcon = document.querySelector(".card .continer i.display");
+        console.log(filterIcon);
         const filteringBoxes = document.querySelector(".card  .items_and_filter .filterCheckBox");
         
 
@@ -49,3 +51,10 @@ lis.forEach((li) => {
         });
         
 
+// to clear the checkboxes after the submition
+
+        function clearForm() {
+
+            document.getElementById('brandFilterForm').reset();
+            window.location.href = window.location.pathname; // Reload the page
+        }
