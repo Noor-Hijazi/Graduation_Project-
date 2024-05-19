@@ -2,7 +2,7 @@
 
     include ("nav.php");
     require_once 'includes/db.inc.php';
-    require_once 'includes/carDetail_model.inc.php' ;
+    require_once 'models/carDetail_model.inc.php' ;
     ?>
 <!DOCTYPE html>
 <html lang="en">

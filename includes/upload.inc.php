@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
     try {
         require_once 'db.inc.php';
-        require 'uplaod_model.inc.php';
-        require_once 'upload_contr.inc.php';
+        require '../models/uplaod_model.inc.php';
+        require_once '../controller/upload_contr.inc.php';
 
         handle_image_upload($pdo,$location,$rating, $fileName, $fileTmpName, $fileSize, $fileError, $fileType,$userID );
     } catch (PDOException $e) {

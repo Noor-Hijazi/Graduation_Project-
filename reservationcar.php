@@ -1,7 +1,7 @@
 <?php
 include_once("nav.php");
 require_once 'includes/db.inc.php';
-require_once 'includes/car_rental_veiw.inc.php';
+require_once 'views/car_rental_veiw.inc.php';
  // Check if 'ID' parameter is provided in the URL
  if (isset($_GET['ID'])) {
     $id = trim($_GET['ID'], '{}\\'); // Trim any curly braces and backslash to get just the id 
@@ -68,8 +68,8 @@ require_once 'includes/car_rental_veiw.inc.php';
                 
 
                     
-                <input type="hidden" name="carID" value= '<?php echo $carId; ?>'> 
-                <input type="hidden" name="userID" value= '<?php echo $_SESSION['user_id'] ?>'> 
+                <input type="text" name="carID" value= '<?php echo $carId; ?>'> 
+                <input type="text" name="userID" value= '<?php echo $_SESSION['user_id'] ?>'> 
                 <input type="submit" value="Book Car">
     </form>
 
