@@ -3,7 +3,8 @@
 
 require_once "includes/db.inc.php";
 
-require_once "includes/upload_view.inc.php";
+
+require_once __DIR__ . '/../GP2/views/upload_view.inc.php';
 
 ?>
 <!DOCTYPE html>

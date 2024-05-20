@@ -9,8 +9,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     try{
 
         require_once 'db.inc.php';
-        require_once 'login_model.inc.php';
-        require_once 'login_contr.inc.php';
+        require_once '../models/login_model.inc.php';
+        require_once '../controller/login_contr.inc.php';
 
          // running error handlers
          $errors = [];

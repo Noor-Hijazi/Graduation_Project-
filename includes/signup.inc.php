@@ -11,8 +11,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     
     try{
         require_once 'db.inc.php';
-        require_once 'signup-model.inc.php';
-        require_once 'signup_contr.inc.php';
+        require_once '../models/signup-model.inc.php';
+        require_once '../controller/signup_contr.inc.php';
 
         // running error handlers
         $errors = [];

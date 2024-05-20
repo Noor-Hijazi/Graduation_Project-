@@ -24,8 +24,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST['driving_license'] == 1 && is
 
     try {
         require_once 'db.inc.php';
-        require 'car_rental_model.inc.php';
-        require_once 'car_rental_contr.inc.php';
+        require '../models/car_rental_model.inc.php';
+        require_once '../controller/car_rental_contr.inc.php';
+
  
         
         create_rental($pdo,$carId ,$userId,$start_date,$end_date, $location_from ,$location_to,$fileName, $fileTmpName, $fileSize, $fileError, $fileType);
