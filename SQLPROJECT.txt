@@ -18,8 +18,12 @@ CREATE TABLE car (
     fuel VARCHAR(200) NOT NULL,
     seats INT CHECK (seats > 0),
     rental_price DECIMAL(10, 2) NOT NULL,
-    model VARCHAR(200) NOT NULL
+    model VARCHAR(200) NOT NULL,
+userID INT (11) NOT NULL
 );
+ALTER TABLE car ADD CONSTRAINT car_userFK FOREIGN KEY
+(userID) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE;
+
 
 
 ALTER TABLE car_detail
@@ -69,3 +73,47 @@ CREATE TABLE car_rental (
     userID INT NOT NULL,
     carID INT NOT NULL
 );
+
+
+
+
+CREATE TABLE htl_reservations (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT NOT NULL,
+    checkin_date DATETIME NOT NULL,
+    checkout_date DATETIME NOT NULL,
+    guest_name VARCHAR(100) NOT NULL,
+    guest_email VARCHAR(255) NOT NULL
+ );
+
+
+CREATE TABLE hotels(
+    hotel_id INT AUTO_INCREMENT PRIMARY KEY,
+    img VARCHAR(255) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    location VARCHAR(255)
+);
+
+CREATE TABLE reservations (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    restaurant_id INT,
+    user_name VARCHAR(100) NOT NULL,
+    user_email VARCHAR(100) NOT NULL,
+    reservation_date DATE NOT NULL,
+    reservation_time TIME NOT NULL,
+    num_people INT NOT NULL
+);
+
+CREATE TABLE restaurants(
+    restaurant_id INT AUTO_INCREMENT PRIMARY KEY,
+    img_url VARCHAR(255) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    menu_url VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    category VARCHAR(255) NOT NULL
+
+);
+ALTER TABLE restaurants ADD CONSTRAINT fk_resturent_user FOREIGN KEY (id) REFERENCES users (id);
+ALTER TABLE htl_reservations ADD CONSTRAINT fk_hotel FOREIGN KEY (hotel_id) REFERENCES hotels (id);
+ALTER TABLE reservations ADD CONSTRAINT fk_resturent FOREIGN KEY (restaurant_id) REFERENCES restaurants (id);
