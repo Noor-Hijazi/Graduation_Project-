@@ -117,3 +117,9 @@ CREATE TABLE restaurants(
 ALTER TABLE restaurants ADD CONSTRAINT fk_resturent_user FOREIGN KEY (id) REFERENCES users (id);
 ALTER TABLE htl_reservations ADD CONSTRAINT fk_hotel FOREIGN KEY (hotel_id) REFERENCES hotels (id);
 ALTER TABLE reservations ADD CONSTRAINT fk_resturent FOREIGN KEY (restaurant_id) REFERENCES restaurants (id);
+
+CREATE TABLE wishlist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    item_id INT
+);ALTER TABLE wishlist ADD CONSTRAINT wishlist_user_FK FOREIGN KEY (user_id) REFERENCES users(id), ADD CONSTRAINT wishlist_item_FK FOREIGN KEY (item_id) REFERENCES car(id);

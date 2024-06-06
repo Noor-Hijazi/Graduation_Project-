@@ -1,0 +1,185 @@
+/* Start Globle Featers */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    --border-color: #0000002e;
+    --main-color:#E4D3B5;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+  }
+  
+  @media (max-width:767px) {
+    .continer {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width:768px) {
+    .continer {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width:992px) {
+    .continer {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* End Globle Featers  */
+.page{
+   margin-top: -16px;
+   display: flex;
+   min-height: 100vh;
+   gap: 20px ;
+   justify-content: space-between;
+}
+
+.sidebar {
+    height: 100%;
+   max-width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    padding: 2px;
+}
+
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding:10px;;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555555;
+}
+
+
+.content {
+    margin-top: 30px;
+    max-width: 80%;
+    margin-left: 280px;
+    margin-right:20px;
+    padding:20px;
+}
+
+
+
+/* Company info */
+
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    flex: 0 0 calc(50% - 20px); /* Two boxes per row with margin */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Optional: Add background color */
+}
+
+.field-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.field-value {
+    font-size: 16px;
+}
+
+
+
+/* Read cars  */
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table header */
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for table rows */
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Style for buttons */
+.button {
+    margin-left: 5px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #555555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+/* Details */
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.para {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.slider .slide{
+    margin-left: -250px;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+}
