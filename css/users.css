@@ -1,0 +1,209 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
+/* Page Layout */
+.page {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Allow sidebar to scroll if content overflows */
+}
+
+.sidebar h2 {
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Content Area */
+.content {
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 250px; /* Ensure content is beside the sidebar */
+    overflow-y: auto; /* Allow content to scroll if it overflows */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-inner {
+    flex-grow: 1; /* Ensures inner content takes up all available space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #34495e;
+    margin-top: 0; /* Add consistent margin top */
+}
+
+/* Paragraph Styling */
+p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Sections Styling */
+.welcome, .edit-info, .car-rentals {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit Info Form */
+.edit-info form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make the form responsive */
+    max-width: 500px; /* Limit the form width */
+}
+
+.edit-info label {
+    margin-top: 10px;
+    font-weight: bold; /* Improve label visibility */
+}
+
+.edit-info input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.edit-info button {
+    padding: 10px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-info button:hover {
+    background-color: #3498db;
+}
+
+/* Car Rentals */
+.car-rentals {
+    flex-grow: 1; /* Allow car rentals to grow and fill available space */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px;
+}
+
+.car-rental {
+    flex: 1 1 300px; /* Ensure each car rental box is responsive */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-rental p {
+    margin: 5px 0;
+}
+
+.car-image {
+    max-width: 50%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    padding: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .edit-info form {
+        width: 100%;
+    }
+
+    .car-rentals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-rental {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}

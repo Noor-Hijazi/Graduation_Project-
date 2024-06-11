@@ -1,0 +1,30 @@
+.landing .continer {
+    background-image: url("https://images.pexels.com/photos/6108074/pexels-photo-6108074.jpeg");
+    position: relative;
+    z-index:-1;
+}
+.landing .continer .content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.landing .continer .content h1{
+    text-shadow: 11px 8px 25px black;
+    font-size:60px;
+}
+.landing .continer .content p{
+    text-shadow: 11px 8px 25px black;
+    font-size: 30px;;
+}
+
+/* Start guides */
+.guide{
+    background-color: white;
+}
+/* End guides */
