@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+.company-details {
+    margin-bottom: 20px;
+}
+
+.company-details p {
+    margin-bottom: 10px;
+}
+
+#edit-company-form {
+    margin-top: 20px;
+}
+
+#edit-company-form .form-group {
+    margin-bottom: 10px;
+}
+/* Styles for Company Information Page */
+
+.company-details {
+    margin-bottom: 20px;
+}
+
+.company-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#edit-company-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#edit-company-btn:hover {
+    background-color: #45a049;
+}
+
+#edit-company-form {
+    margin-top: 20px;
+    display: none;
+}
+
+#edit-company-form .form-group {
+    margin-bottom: 15px;
+}
+
+#edit-company-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#edit-company-form input[type="text"],
+#edit-company-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#edit-company-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#edit-company-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styles for Car Inventory Page */
+
+.car-list {
+    margin-bottom: 20px;
+}
+
+.car-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.car-list table th,
+.car-list table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.car-list table th {
+    background-color: #f2f2f2;
+}
+
+#add-car-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#add-car-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styles for Settings Page */
+
+#settings-form {
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}
